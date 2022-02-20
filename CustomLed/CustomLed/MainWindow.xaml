@@ -1,0 +1,27 @@
+﻿<Window x:Class="CustomLed.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomLed"
+        mc:Ignorable="d"
+        Title="Custom Led" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <local:Led1 Grid.Row="0" Grid.Column="0" Color="Green" Size="40" />
+
+        <local:Led2 Grid.Row="0" Grid.Column="1" Color="Red" zShadow="Blue"  Size="40" />
+
+        <local:Led4 Grid.Row="0" Grid.Column="2" ColorNumber="2" Size="40" />         
+
+    </Grid>
+</Window>

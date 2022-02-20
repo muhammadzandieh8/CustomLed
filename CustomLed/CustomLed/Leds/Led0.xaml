@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="CustomLed.Leds.Led0"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CustomLed.Leds"
+             mc:Ignorable="d" 
+             Loaded="LED_Loaded"
+             d:DesignHeight="40" d:DesignWidth="40">
+    <!--<materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect Kind=ExpandIn}">
+    </materialDesign:TransitioningContent>-->
+    <Grid Name="G_main">
+        <Ellipse Name="MainEllipse" Width="20" Height="20" >
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#FF5B5E66" Offset="1" />
+                    <GradientStop Color="#d7dde8"   Offset="0" />
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Effect>
+                <DropShadowEffect Color="#FF685656" BlurRadius="10" ShadowDepth="2"  />
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse Name="FrontEllipse" Width="19" Height="19" >
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Offset="0.02" x:Name="StartColor" Color="Red" />
+                    <GradientStop Offset="1.3"  x:Name="StopColor"  Color="Black"  />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Name="Shadow" Width="23" Height="23">
+            <Ellipse.Fill>
+                <RadialGradientBrush Opacity="0.3" >
+                    <GradientStop Color="Transparent"   Offset="1" />
+                    <GradientStop Color="Silver"        Offset="0" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+
+        </Ellipse>
+    </Grid>
+</UserControl>

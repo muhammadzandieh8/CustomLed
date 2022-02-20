@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="CustomLed.Led1"
+             xmlns:local="clr-namespace:CustomLed"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d" 
+             Loaded="LED_Loaded" >
+    <Grid Name="G_main">
+        <Ellipse Name="MainEllipse" >
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#FF5B5E66" Offset="1" />
+                    <GradientStop Color="#d7dde8"   Offset="0" />
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Effect>
+                <DropShadowEffect Color="#FF685656" BlurRadius="10" ShadowDepth="2"  />
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse Name="FrontEllipse" >
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Offset="0.02" x:Name="StartColor"  />
+                    <GradientStop Offset="1.3"  x:Name="StopColor"  />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Name="Shadow">
+            <Ellipse.Fill>
+                <RadialGradientBrush Opacity="0.3" >
+                    <GradientStop Color="Transparent"   Offset="1" />
+                    <GradientStop Color="Silver"        Offset="0" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+
+        </Ellipse>
+    </Grid>
+</UserControl>
